@@ -20,7 +20,6 @@ function clicked(event){
     const audio = event.currentTarget.querySelector('audio');
     const currentCard = event.currentTarget.dataset.cardnumber;
     playSound(audio);
-    countTime();
     if(previousCard === null){
         previousCard = currentCard;
     } else if(previousCard === currentCard){
