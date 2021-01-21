@@ -11,6 +11,7 @@ let previousCard = null;
 let timer = document.querySelector('#time-remain');
 let timeStarts = 0;
 
+
 //game play stuff
 function playSound(audio) {
     audio.play()
@@ -29,24 +30,21 @@ function clicked(event){
     } else{
         previousCard = null;
     }
-    flips.innerHTML = ++flipsCount;
+        flips.innerHTML = ++flipsCount;
      
 }
-
-
-//button functions stuff
-function countTime(){  
-    setInterval(function() {
+//button function stuff
+function countTime(){
+     setInterval(function() {
         timer.innerHTML = ++timeStarts;
-    }, 1000)
+    }, 1000);    
 }
 
 function resetGame(){
     location.reload()
 }
 
-
 //event listener stuff
 cards.forEach(card => card.addEventListener('click', clicked, false));
 start.addEventListener('click', countTime);
-reset.addEventListener('click', resetGame)
+reset.addEventListener('click', resetGame);

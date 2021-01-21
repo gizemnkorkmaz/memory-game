@@ -99,18 +99,18 @@ body{
 
 
 button{
-   background: none;
-   color:rgb(63, 63, 63);
-   width: 70px;
-   height: 30px;
-   border: 1px solid;
-   font-size: 20px;
-   font-family: 'Amatic SC', cursive;
-   border-radius: 4px;
-   transition: .6s;
-   overflow: hidden;
-   cursor: pointer;
-}
+    background: none;
+    color:rgb(63, 63, 63);
+    width: 70px;
+    height: 30px;
+    border: 1px solid;
+    font-size: 20px;
+    font-family: 'Amatic SC', cursive;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    cursor: pointer;
+ }
 
 button:hover{
     width: 80px;
