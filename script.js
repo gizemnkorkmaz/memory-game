@@ -2,6 +2,7 @@
 const buttons = document.querySelectorAll('.btn');
 const start = document.querySelector('#start');
 const reset = document.querySelector('#reset');
+let buttonClicked = false;
 //card stuff
 const cards = document.querySelectorAll('.card-container');
 const flips = document.querySelector('#flips');
@@ -14,10 +15,13 @@ let timeStarts = 0;
 
 //game play stuff
 function playSound(audio) {
-    audio.play()
+    audio.play();  
 }
 
 function clicked(event){
+    if(buttonClicked === false){
+        window.alert(`Well... Maybe you should have clicked 'start' to start? Maybe? Just sayin' 🤓`);
+    } else {
     const audio = event.currentTarget.querySelector('audio');
     const currentCard = event.currentTarget.dataset.cardnumber;
     playSound(audio);
@@ -31,11 +35,14 @@ function clicked(event){
         previousCard = null;
     }
         flips.innerHTML = ++flipsCount;
-     
+         
+    }
+    
 }
 //button function stuff
 function countTime(){
-     setInterval(function() {
+    buttonClicked = true;
+    setInterval(function() {
         timer.innerHTML = ++timeStarts;
     }, 1000);    
 }
@@ -48,3 +55,4 @@ function resetGame(){
 cards.forEach(card => card.addEventListener('click', clicked, false));
 start.addEventListener('click', countTime);
 reset.addEventListener('click', resetGame);
+
