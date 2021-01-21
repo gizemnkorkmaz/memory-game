@@ -2,6 +2,8 @@
 const buttons = document.querySelectorAll('.btn');
 const start = document.querySelector('#start');
 const reset = document.querySelector('#reset');
+const title = document.querySelector('.page-title')
+let matchedCardNumber = 0;
 let buttonClicked = false;
 //card stuff
 const cards = document.querySelectorAll('.card-container');
@@ -31,11 +33,14 @@ function clicked(event){
         previousCard = null;
         const matchedCards = document.querySelectorAll(`[data-cardNumber="${currentCard}"]`);
         matchedCards.forEach(card => card.classList.add('matched'));
+        matchedCardNumber++;
     } else{
         previousCard = null;
     }
         flips.innerHTML = ++flipsCount;
-         
+        if(matchedCardNumber === 8){
+            title.innerHTML = 'Yey! You finished it! 😍';
+        }
     }
     
 }
