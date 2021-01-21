@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+    
+  }
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 1em;
+    background-color: #eee;
+}
+
+
+body{
+    margin: 0 auto;
+    background: #eee;
+    justify-items: center;
+    background-size: cover;
+    }
+
+.page-title{
+    color:rgb(63, 63, 63);
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    text-align: center;
+    font-size: 5em;
+    text-transform: uppercase;
+    }
+
+.game-info{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    color:rgb(63, 63, 63);
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 25px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+    
+}
+.card {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    margin: 5px;
+    border: 4px solid black;
+    border-radius: 1em;
+    display: block;   
+}
+
+.listening{
+    position: relative;
+    background: none;
+    cursor: pointer;
+    margin: 5px;
+    border: 4px solid black;
+    border-radius: 1em;
+    display: none;
+   
+}
+
+.matched .listening{
+    display: block;
+    border: 4px solid rgb(14, 180, 14);
+}
+.matched .card{
+    display: none;
+    border: 4px solid rgb(14, 180, 14);
+}
+
+.hidden{
+    display: none;
+}
+
+.card:hover{
+    background: none;
+    cursor: pointer;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 1em;
+    -moz-box-shadow: 0 0 10px #777777;
+    -webkit-box-shadow: 0 0 10px #777777;
+    box-shadow: 0 0 10px #777777;
+}
+
+
+button{
+   background: none;
+   color:rgb(63, 63, 63);
+   width: 70px;
+   height: 30px;
+   border: 1px solid;
+   font-size: 20px;
+   font-family: 'Amatic SC', cursive;
+   border-radius: 4px;
+   transition: .6s;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+button:hover{
+    width: 80px;
+    height: 40px;
+}
+
